@@ -1,0 +1,53 @@
+name: "✅ Task"
+description: "A specific piece of work."
+type: "Task"
+title: "[Task]: "
+labels: ["task", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use this template for a well-defined piece of implementation, refactor, or investigation."
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Task Summary"
+      description: "What needs to be done?"
+      placeholder: "Migrate delivery address form off the side drawer to inline layout."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      description: "Why does this task exist? Link parent epic, feature, or bug."
+      placeholder: "Part of Epic #45. Follows from feedback in PR #89."
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      description: "How we'll know the task is done."
+      placeholder: "- Old drawer code removed\n- Inline form renders on all breakpoints\n- No layout shift on save"
+    validations:
+      required: true
+  - type: textarea
+    id: technical
+    attributes:
+      label: "Technical Notes"
+      description: "Files, components, endpoints, or gotchas to keep in mind."
+  - type: dropdown
+    id: effort
+    attributes:
+      label: "Estimated Effort"
+      options:
+        - XS (< half a day)
+        - S (< 1 day)
+        - M (1–2 days)
+        - L (3–5 days)
+        - XL (1+ weeks)
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: "Parent Issue"
+      placeholder: "e.g., #45"

@@ -1,0 +1,57 @@
+name: "🧭 Epic"
+description: "Epic issue with features."
+type: "Epic"
+title: "[Epic]: "
+labels: ["epic", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Use this template to capture a large body of work that spans multiple features or tasks."
+  - type: textarea
+    id: goal
+    attributes:
+      label: "Goal"
+      description: "What outcome does this epic achieve for the user or business?"
+      placeholder: "Enable parents to manage multiple children from a single account."
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context & Motivation"
+      description: "Why are we doing this now? Reference research, incidents, or strategy docs."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: "In Scope"
+      description: "What this epic covers."
+      placeholder: "- Multi-child account model\n- Child switcher UI\n- Per-child usage dashboards"
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: "Out of Scope"
+      description: "What this epic explicitly does not cover."
+      placeholder: "- Parental billing splits\n- Cross-family sharing"
+  - type: textarea
+    id: success
+    attributes:
+      label: "Success Criteria"
+      description: "How we'll know the epic is done and successful."
+      placeholder: "- 80% of new parents add ≥2 children within first week\n- Zero critical bugs on child switcher"
+    validations:
+      required: true
+  - type: textarea
+    id: child-issues
+    attributes:
+      label: "Child Issues / Features"
+      description: "List or link the features and tasks that make up this epic."
+      placeholder: "- [ ] #123 Feature: child switcher\n- [ ] #124 Task: schema migration"
+  - type: input
+    id: target
+    attributes:
+      label: "Target Release / Milestone"
+      placeholder: "e.g., Q3 2026, v3.0"

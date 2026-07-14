@@ -1,0 +1,58 @@
+name: "✨ Feature"
+description: "A request, idea, or new functionality."
+type: "Feature"
+title: "[Feature]: "
+labels: ["feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Describe the feature so the team can scope, prioritize, and design it."
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Problem / User Need"
+      description: "What problem does this solve? Who feels it?"
+      placeholder: "Parents can't currently see which learning apps their child used this week."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "Proposed Solution"
+      description: "Describe the feature as concretely as you can."
+      placeholder: "Add a weekly usage summary card on the parent dashboard."
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Alternatives Considered"
+      description: "Other approaches you thought about and why you didn't pick them."
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "Acceptance Criteria"
+      description: "What must be true for this feature to ship?"
+      placeholder: "- Card renders for accounts with ≥1 child\n- Data covers Mon–Sun of the current week"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priority"
+      options:
+        - P0 – Critical
+        - P1 – High
+        - P2 – Medium
+        - P3 – Low
+    validations:
+      required: true
+  - type: textarea
+    id: mocks
+    attributes:
+      label: "Designs / Mockups"
+      description: "Link to Figma frames, screenshots, or sketches."
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional Context"

@@ -1,0 +1,68 @@
+name: "🐛 Bug"
+description: "An unexpected problem or behavior."
+type: "Bug"
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please fill out the form details thoroughly so our team can investigate."
+  - type: input
+    id: version
+    attributes:
+      label: "What version are you using?"
+      placeholder: "e.g., v2.4.1"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "A clear and concise description of the bug."
+      placeholder: "When I do X, Y happens instead of Z."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Step-by-step instructions on how to replicate the issue."
+      placeholder: "1. Go to...\n2. Click on...\n3. Observe..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected Behavior"
+      placeholder: "What should have happened."
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual Behavior"
+      placeholder: "What actually happened. Include screenshots or logs if possible."
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Where did this happen?"
+      options:
+        - Production
+        - Staging
+        - Local development
+        - Preview deploy
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: "Browser / Device"
+      placeholder: "e.g., Chrome 128 on macOS 14, iPhone 15 Safari"
+  - type: textarea
+    id: additional
+    attributes:
+      label: "Additional Context"
+      description: "Anything else the team should know — related issues, workarounds, hypotheses."
