@@ -37,11 +37,25 @@ body:
     attributes:
       label: "Suggested Task Breakdown"
       placeholder: "- [ ] Task 1\n- [ ] Task 2"
-  - type: input
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: "Definition of Done"
+      value: "- [ ] Code written and reviewed\n- [ ] Tested locally\n- [ ] Merged into main"
+    validations:
+      required: true
+  - type: dropdown
     id: estimated-effort
     attributes:
-      label: "Estimated Effort"
-      placeholder: "e.g., 2 days / 1 week"
+      label: "Effort"
+      options:
+        - XS (< 2 hours)
+        - S (half day)
+        - M (1 day)
+        - L (2–3 days)
+        - XL (1 week+)
+    validations:
+      required: true
   - type: dropdown
     id: priority
     attributes:

@@ -2,13 +2,13 @@ name: "🎯 Epic"
 description: "Epic issue with features."
 type: "Epic"
 title: "🎯 Epic: "
-labels: ["epic", "triage"]
+labels: ["Epic", "triage"]
 body:
   - type: textarea
     id: user-story
     attributes:
       label: "User Story"
-      placeholder: "As a [persona]\nI want to [action]\nSo that [benefit]"
+      value: "As a [persona]\nI want to [action]\nSo that [benefit]"
     validations:
       required: true
   - type: textarea
@@ -22,11 +22,11 @@ body:
     id: feature-list
     attributes:
       label: "Feature List"
-      placeholder: "- [ ] Feature 1\n- [ ] Feature 2"
+      value: "- [ ] Feature 1\n- [ ] Feature 2"
     validations:
       required: true
   - type: input
     id: target-release
     attributes:
       label: "Target Release / Milestone"
-      placeholder: "e.g., Q3 2026 Release"
+      value: "e.g., Q3 2026 Release"

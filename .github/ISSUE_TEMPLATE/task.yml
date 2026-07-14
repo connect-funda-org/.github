@@ -4,13 +4,6 @@ type: "Task"
 title: "✅ Task: "
 labels: ["task", "triage"]
 body:
-  - type: input
-    id: parent-feature
-    attributes:
-      label: "Parent Feature"
-      placeholder: "e.g., #123"
-    validations:
-      required: true
   - type: textarea
     id: scope
     attributes:
@@ -23,17 +16,22 @@ body:
     attributes:
       label: "Technical Details / Assumptions"
       description: "Any relevant business rules, edge cases, or dependencies."
-  - type: input
-    id: estimated-effort
+  - type: textarea
+    id: acceptance-criteria
     attributes:
-      label: "Estimated Effort"
-      placeholder: "e.g., 2-4 hours / 1 day"
+      label: "Acceptance Criteria"
+      placeholder: "- [ ] Condition of satisfaction 1\n- [ ] Condition of satisfaction 2"
     validations:
       required: true
-  - type: textarea
-    id: definition-of-done
+  - type: dropdown
+    id: estimated-effort
     attributes:
-      label: "Definition of Done"
-      value: "- [ ] Code written and reviewed\n- [ ] Tested locally\n- [ ] Merged into main"
+      label: "Effort"
+      options:
+        - XS (< 2 hours)
+        - S (half day)
+        - M (1 day)
+        - L (2–3 days)
+        - XL (1 week+)
     validations:
       required: true
