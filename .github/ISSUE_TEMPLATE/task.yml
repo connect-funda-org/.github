@@ -1,53 +1,39 @@
 name: "✅ Task"
 description: "A specific piece of work."
 type: "Task"
-title: "[Task]: "
+title: "✅ Task: "
 labels: ["task", "triage"]
 body:
-  - type: markdown
+  - type: input
+    id: parent-feature
     attributes:
-      value: "Use this template for a well-defined piece of implementation, refactor, or investigation."
-  - type: textarea
-    id: summary
-    attributes:
-      label: "Task Summary"
-      description: "What needs to be done?"
-      placeholder: "Migrate delivery address form off the side drawer to inline layout."
+      label: "Parent Feature"
+      placeholder: "e.g., #123"
     validations:
       required: true
   - type: textarea
-    id: context
+    id: scope
     attributes:
-      label: "Context"
-      description: "Why does this task exist? Link parent epic, feature, or bug."
-      placeholder: "Part of Epic #45. Follows from feedback in PR #89."
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: "Acceptance Criteria"
-      description: "How we'll know the task is done."
-      placeholder: "- Old drawer code removed\n- Inline form renders on all breakpoints\n- No layout shift on save"
+      label: "Scope of Work"
+      description: "Detailed explanation of what needs to be coded, designed, or resolved."
     validations:
       required: true
   - type: textarea
     id: technical
     attributes:
-      label: "Technical Notes"
-      description: "Files, components, endpoints, or gotchas to keep in mind."
-  - type: dropdown
-    id: effort
+      label: "Technical Details / Assumptions"
+      description: "Any relevant business rules, edge cases, or dependencies."
+  - type: input
+    id: estimated-effort
     attributes:
       label: "Estimated Effort"
-      options:
-        - XS (< half a day)
-        - S (< 1 day)
-        - M (1–2 days)
-        - L (3–5 days)
-        - XL (1+ weeks)
+      placeholder: "e.g., 2-4 hours / 1 day"
     validations:
       required: true
-  - type: input
-    id: parent
+  - type: textarea
+    id: definition-of-done
     attributes:
-      label: "Parent Issue"
-      placeholder: "e.g., #45"
+      label: "Definition of Done"
+      value: "- [ ] Code written and reviewed\n- [ ] Tested locally\n- [ ] Merged into main"
+    validations:
+      required: true

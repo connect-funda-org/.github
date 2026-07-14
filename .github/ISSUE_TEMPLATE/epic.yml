@@ -1,57 +1,32 @@
-name: "🧭 Epic"
+name: "🎯 Epic"
 description: "Epic issue with features."
 type: "Epic"
-title: "[Epic]: "
+title: "🎯 Epic: "
 labels: ["epic", "triage"]
 body:
-  - type: markdown
-    attributes:
-      value: "Use this template to capture a large body of work that spans multiple features or tasks."
   - type: textarea
-    id: goal
+    id: user-story
     attributes:
-      label: "Goal"
-      description: "What outcome does this epic achieve for the user or business?"
-      placeholder: "Enable parents to manage multiple children from a single account."
+      label: "User Story"
+      placeholder: "As a [persona]\nI want to [action]\nSo that [benefit]"
     validations:
       required: true
   - type: textarea
-    id: context
+    id: business-value
     attributes:
-      label: "Context & Motivation"
-      description: "Why are we doing this now? Reference research, incidents, or strategy docs."
+      label: "Business Value / Context"
+      description: "Why is this important? What is the impact on the product or user?"
     validations:
       required: true
   - type: textarea
-    id: scope
+    id: feature-list
     attributes:
-      label: "In Scope"
-      description: "What this epic covers."
-      placeholder: "- Multi-child account model\n- Child switcher UI\n- Per-child usage dashboards"
+      label: "Feature List"
+      placeholder: "- [ ] Feature 1\n- [ ] Feature 2"
     validations:
       required: true
-  - type: textarea
-    id: out-of-scope
-    attributes:
-      label: "Out of Scope"
-      description: "What this epic explicitly does not cover."
-      placeholder: "- Parental billing splits\n- Cross-family sharing"
-  - type: textarea
-    id: success
-    attributes:
-      label: "Success Criteria"
-      description: "How we'll know the epic is done and successful."
-      placeholder: "- 80% of new parents add ≥2 children within first week\n- Zero critical bugs on child switcher"
-    validations:
-      required: true
-  - type: textarea
-    id: child-issues
-    attributes:
-      label: "Child Issues / Features"
-      description: "List or link the features and tasks that make up this epic."
-      placeholder: "- [ ] #123 Feature: child switcher\n- [ ] #124 Task: schema migration"
   - type: input
-    id: target
+    id: target-release
     attributes:
       label: "Target Release / Milestone"
-      placeholder: "e.g., Q3 2026, v3.0"
+      placeholder: "e.g., Q3 2026 Release"
