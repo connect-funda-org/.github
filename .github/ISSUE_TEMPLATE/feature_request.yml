@@ -2,7 +2,7 @@ name: "🚀 Feature"
 description: "A request, idea, or new functionality."
 type: "Feature"
 title: "🚀 Feature: "
-labels: ["feature", "triage"]
+labels: ["Feature", "triage"]
 body:
   - type: textarea
     id: user-story

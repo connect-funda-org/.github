@@ -2,7 +2,7 @@ name: "✅ Task"
 description: "A specific piece of work."
 type: "Task"
 title: "✅ Task: "
-labels: ["task", "triage"]
+labels: ["Task", "triage"]
 body:
   - type: textarea
     id: scope
